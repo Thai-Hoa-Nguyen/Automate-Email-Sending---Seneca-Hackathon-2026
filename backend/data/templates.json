@@ -1,0 +1,10 @@
+[
+  {
+    "id": "0fc80354-45b6-45ed-ae5b-3079ebf66630",
+    "name": "Welcoming Email",
+    "subject": "Welcoming to Seneca Hackathon 2026, {{ fullName}}!",
+    "bodyHtmlOrText": "<p>Hi {{fullName}} !<p>",
+    "bodySource": "app",
+    "updatedAt": "2026-04-06T22:03:05.825Z"
+  }
+]

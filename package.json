@@ -1,0 +1,10 @@
+{
+  "name": "student-success-email-tool",
+  "version": "1.0.0",
+  "scripts": {
+    "backend": "cd backend && node server.js",
+    "frontend": "cd frontend && npx vite",
+    "dev:backend": "cd backend && node server.js",
+    "dev:frontend": "cd frontend && npx vite"
+  }
+}

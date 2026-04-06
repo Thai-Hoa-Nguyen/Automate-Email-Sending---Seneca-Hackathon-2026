@@ -1,0 +1,42 @@
+Cursor Master Planning Prompt: Student Success Email Tool
+System Context:
+You are an expert Full-Stack Engineer and UX Designer. We are building studentsuccessProject, a specialized bulk-email tool for a non-technical Student Success Team.
+
+Project DNA:
+
+Tech Stack: React (Vite) frontend, Node.js (Express) backend.
+
+Engine: exceljs for parsing, nodemailer for Gmail SMTP.
+
+Constraints: Max 500 emails/day (Gmail limit), 10 emails per 3-second batch (Safety limit).
+
+Goal: Make this so simple that a non-tech staff member cannot break it.
+
+Current Task: Phase 1 - UX & Reliability Overhaul
+Please analyze the repository and help me implement the following with a focus on a "Wizard-style" (Step 1, 2, 3) workflow:
+
+1. The "Guided" Frontend (App.jsx)
+Refactor the UI into a clear 3-step process: 1. Upload -> 2. Design & Preview -> 3. Send.
+
+Replace technical labels with "Success Team" friendly language (e.g., "Check Connections" instead of "SMTP Handshake").
+
+Add a Live Preview card that shows exactly what the email looks like for the first student in the Excel list.
+
+2. Smart Column Mapping
+If the Excel headers don't match our expected "Email" or "First Name" fields, create a simple dropdown interface for the user to tell the app which column is which.
+
+3. Safety & Feedback
+Implement a large, "Emergency Stop" button during the sending process.
+
+Ensure that if the user refreshes the page, the "Send Status" (who got the email and who didn't) is not lost.
+
+Rules for your Code Generation:
+
+Safety First: Never allow more than 30 emails per minute.
+
+No Jargon: Error messages should tell the user how to fix it, not just what the error code is.
+
+Clean UI: Use lucide-react icons and a clean, spacious layout.
+
+Next Step for Cursor:
+"Before writing code, please provide a brief outline of how you will modify App.jsx and emailService.js to support this new 'Guided' workflow."

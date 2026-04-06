@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Success Email Tool</title>
+    <script>
+      // Warn if backend isn't reachable (backend not started)
+      window.addEventListener('load', function() {
+        fetch('/api/health').catch(function() {
+          document.body.innerHTML = '<div style="font-family:sans-serif;max-width:540px;margin:80px auto;padding:32px;border:2px solid #fca5a5;border-radius:12px;background:#fef2f2;text-align:center">'
+            + '<div style="font-size:48px">⚠️</div>'
+            + '<h2 style="color:#dc2626;margin:12px 0">Backend is not running</h2>'
+            + '<p style="color:#374151;line-height:1.6">The app needs the backend server to work.</p>'
+            + '<p style="color:#374151;line-height:1.6;margin-top:12px">In your Cursor terminal, run:<br><br>'
+            + '<code style="background:#f3f4f6;padding:10px 16px;border-radius:6px;font-size:13px;display:block;text-align:left;white-space:pre-wrap">'
+            + 'export NVM_DIR="/Users/swagyvc/Documents/sendingEmailAuto/.nvm"\nsource "$NVM_DIR/nvm.sh"\ncd /Users/swagyvc/Documents/sendingEmailAuto\nbash start.sh</code></p>'
+            + '<p style="color:#6b7280;font-size:13px;margin-top:16px">Then open <strong>http://localhost:3001</strong> instead of this page.</p>'
+            + '</div>';
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
